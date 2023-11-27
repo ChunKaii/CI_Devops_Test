@@ -13,3 +13,11 @@ jobs:
     run: |
       ls
     echo Hello There!
+    - name: Check out private remote sources
+      uses: actions/checkout@v4
+      with:
+        repository: chunkaii/reponame
+        token: ${{ secrets.idk }}
+    - name: list contents
+      run:  |
+        ls
